@@ -1,5 +1,5 @@
 import { SignedIn, SignedOut } from "@clerk/nextjs";
-import { log } from "console";
+
 import Link from "next/link";
 import { db } from "~/server/db";
 import { getImages } from "~/server/queries";
@@ -34,7 +34,6 @@ export default async function HomePage() {
     <SignedIn>
       <Images />
     </SignedIn>
-    hello (gallery in progress)
     </main>
   );
 }

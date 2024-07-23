@@ -14,10 +14,11 @@ return (
   <div className="flex justify-center flex-wrap gap-4">
         {images.map((image)=>(
           <div key={image.id} className="flex w-48 flex-col">
-            <Image src={image.url} width={192} height={192}
-    objectFit="contain" alt={image.name} />
-          <div>{image.name}</div>
-            </div>
+          <Link href={`/img/${image.id}`}>
+            <Image src={image.url} width={192} height={192} objectFit="contain" alt={image.name} />
+          </Link>
+        <div>{image.name}</div>
+      </div>
         ))
       }
       </div>
